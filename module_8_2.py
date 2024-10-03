@@ -20,9 +20,9 @@ def calculate_average(*numbers):
     if isinstance(*numbers, int): # проверка на корректные данные (numbers - целое число)
         return None
     try:
-        tuple_pers_sum = personal_sum(*numbers)
+        average_sum = personal_sum(*numbers)
 
-        return tuple_pers_sum[0] / (len(*numbers) - tuple_pers_sum[1])
+        return average_sum[0] / (len(*numbers) - average_sum[1])
     except ZeroDivisionError: # исключение (деление на 0)
         return 0
     except TypeError: # исключение на некорректные данные
