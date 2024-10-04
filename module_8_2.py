@@ -1,4 +1,4 @@
-def personal_sum(*numbers):
+def personal_sum(numbers):
     result = 0  # сумма всех чисел (первоначально равно 0)
     incorrect_data = 0  # количество некорректных данных (первоначально равно 0)
     for i in numbers:  # перебор всех чисел в numbers
@@ -9,7 +9,7 @@ def personal_sum(*numbers):
             print(f'Некорректный тип данных для подсчета суммы - {i}')  # вывод ошибки
     return (result, incorrect_data)  # возврат результата суммы все чисел, количество некорректных данных
 
-def calculate_average(*numbers):
+def calculate_average(numbers):
     try:
         per_sum = personal_sum(numbers)
         avg = per_sum[0] / (len(numbers) - per_sum[1])
